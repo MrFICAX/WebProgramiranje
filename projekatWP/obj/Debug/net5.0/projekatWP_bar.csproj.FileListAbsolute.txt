@@ -1,0 +1,274 @@
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\appsettings.Development.json
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\appsettings.json
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.exe
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.deps.json
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.json
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.dev.json
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.pdb
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csprojAssemblyReference.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.GeneratedMSBuildEditorConfig.editorconfig
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.AssemblyInfoInputs.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.AssemblyInfo.cs
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csproj.CoreCompileInputs.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.MvcApplicationPartsAssemblyInfo.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.Manifest.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.xml
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\scopedcss\bundle\projekatWP_bar.styles.css
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.RazorTargetAssemblyInfo.cache
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.dll
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.pdb
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.genruntimeconfig.cache
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Humanizer.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ElfakWeb\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ElfakWeb\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csproj.CopyComplete
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\appsettings.Development.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\appsettings.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.exe
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.deps.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.dev.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Humanizer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csprojAssemblyReference.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.AssemblyInfoInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.AssemblyInfo.cs
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csproj.CoreCompileInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.MvcApplicationPartsAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.Manifest.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.xml
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\scopedcss\bundle\projekatWP_bar.styles.css
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.RazorTargetAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.csproj.CopyComplete
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Studentski projekti\ZeljkoMiloradovic\WPbar-master\projekatWP_bar\obj\Debug\net5.0\projekatWP_bar.genruntimeconfig.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\projekatWP_bar.exe
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\appsettings.Development.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\appsettings.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Humanizer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.csprojAssemblyReference.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.AssemblyInfoInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.AssemblyInfo.cs
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.csproj.CoreCompileInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.MvcApplicationPartsAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.Manifest.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.xml
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\scopedcss\bundle\projekatWP_bar.styles.css
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.RazorTargetAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.csproj.CopyComplete
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP\obj\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\appsettings.Development.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\appsettings.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.exe
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.deps.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.dev.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Humanizer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.csprojAssemblyReference.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.AssemblyInfoInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.AssemblyInfo.cs
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.csproj.CoreCompileInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.MvcApplicationPartsAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.Manifest.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.xml
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\scopedcss\bundle\projekatWP_bar.styles.css
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.RazorTargetAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.csproj.CopyComplete
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Projekat za WEB\projekatWP - KOPIJA\obj\Debug\net5.0\projekatWP_bar.genruntimeconfig.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\appsettings.Development.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\appsettings.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.exe
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.deps.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.runtimeconfig.dev.json
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Humanizer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.csprojAssemblyReference.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.AssemblyInfoInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.AssemblyInfo.cs
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.csproj.CoreCompileInputs.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.MvcApplicationPartsAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.Manifest.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\staticwebassets\projekatWP_bar.StaticWebAssets.xml
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\scopedcss\bundle\projekatWP_bar.styles.css
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.RazorTargetAssemblyInfo.cache
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.csproj.CopyComplete
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\ref\projekatWP_bar.dll
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.pdb
+D:\ELFAK Filip\V SEMESTAR\Web programiranje\Projekat\Repozitorijum\WebProgramiranje\projekatWP\obj\Debug\net5.0\projekatWP_bar.genruntimeconfig.cache
