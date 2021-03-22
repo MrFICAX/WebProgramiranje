@@ -22,7 +22,7 @@ export class Takmicar {
         }).then(p => {
             if (p.ok) {
                 p.json().then(q => {
-                    alert("Uspesno ste dodali novi proizvod!");
+                    alert("Uspesno ste dodali novog takmicara!");
                 });
             }
             else if (p.status == 406) {

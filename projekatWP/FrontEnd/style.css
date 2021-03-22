@@ -92,7 +92,7 @@ body{
     border-collapse: collapse;
     background-image: url("wp2844805.jpg");
 }
-.container:hover *{
+.DivSveTabele:hover *{
     color: rgb(227, 251, 7);
 }
 .contForm{
