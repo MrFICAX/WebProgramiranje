@@ -9,6 +9,7 @@ export class Klub {
         this.arrive_time = datum_prijave;
         this.takmicari = [];
         this.container = null;
+        this.brojKlikova = false;
     }
     Fetch() {
         fetch("https://localhost:5001/Takmicenje/PostKlub/" + this.id, {
@@ -99,6 +100,19 @@ export class Klub {
         something.className = "imeKluba";
         something.innerHTML = "Ime kluba: " + this.ime;
         contForm1.appendChild(something);
+        
+        const izmeniIme = document.createElement("div");
+        izmeniIme.className = "izmeniIme";
+        contForm1.appendChild(izmeniIme);
+
+        something = document.createElement("button");
+        something.innerHTML = "Izmeni ime kluba";
+        something.className = "dugme izmeni";
+        izmeniIme.appendChild(something);
+        something.onclick = (ev) => {
+            if (!this.brojKlikova)
+                this.crtajUpdateImeKluba();
+        }
 
         something = document.createElement("h3");
         something.className = "brojT";
@@ -168,6 +182,75 @@ export class Klub {
             this.azurirajBrojTakmicara();
         }
         this.crtajKategorije(this.container);
+    }
+    crtajUpdateImeKluba() {
+        this.brojKlikova = true;
+
+        let izmeniDiv = this.container.getElementsByClassName("izmeniIme")[0];
+       
+        const izmeniIme = document.createElement("div");
+        izmeniIme.className = "izmeniImeDiv";
+        izmeniDiv.appendChild(izmeniIme);
+
+        let something = document.createElement("label");
+        something.innerHTML = "Unesite novo ime:";
+        izmeniIme.appendChild(something);
+        something = document.createElement("input");
+        something.type = "text";
+        something.className = "novoImeKluba";
+        izmeniIme.appendChild(something);
+
+        something = document.createElement("button");
+        something.innerHTML = "Dodaj novo ime";
+        something.className = "dugme";
+        izmeniIme.appendChild(something);
+        something.onclick = (ev) => {
+            this.promeniImeKluba();
+            this.brojKlikova = false;
+            this.obrisiUpdateKlub();
+        }
+    }
+    obrisiUpdateKlub() {
+        let parent = this.container.getElementsByClassName("izmeniImeDiv")[0];
+        // let num = parent.childElementCount;
+        // for(let i = 0; i<num;i++)
+        //     parent.childNodes[i].remove();
+        parent.remove();
+    }
+    promeniImeKluba() {
+        const novoImeKluba = this.container.querySelector(".novoImeKluba").value;
+        this.ime = novoImeKluba;
+        this.crtajNovoIme();
+        this.UpdateKlubFetch();
+    }
+    crtajNovoIme() {
+        let labelaIme = this.container.querySelector(".imeKluba");
+        labelaIme.innerHTML = "Ime kluba: " + this.ime;
+    }
+    UpdateKlubFetch() {
+        fetch("https://localhost:5001/Takmicenje/UpdateKlub/" + this.id, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id:this.id,
+                ime: this.ime,
+                datum_prijave: this.arrive_time
+
+            })
+        }).then(p => {
+            if (p.ok) {
+                p.json().then(q => {
+                    alert("Uspesno ste promenili ime kluba!");
+                });
+            }
+            else if (p.status == 406) {
+                alert("Input all informations.");
+            }
+        }).catch(p => {
+            alert("Error");
+        });
     }
     ObradiTakmicara() {
 

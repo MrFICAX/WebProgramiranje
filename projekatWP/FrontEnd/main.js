@@ -10,7 +10,7 @@ fetch("https://localhost:5001/Takmicenje/GetTakmicenje").then(p => {
         data.forEach(takmicenje => {
             const rest1 = new Takmicenje(takmicenje.id);
             takmicenje.klubovi.forEach(klub => {
-                var Noviklub = new Klub(takmicenje.id, klub.ime, klub.datum_prijave);
+                var Noviklub = new Klub(klub.id, klub.ime, klub.datum_prijave);
                 rest1.dodajObjekatKlub(Noviklub);
                 klub.takmicari.forEach(takmicari =>{
                     var NoviTakmicar = new Takmicar( takmicari.ime, takmicari.prezime, takmicari.kilaza, takmicari.kategorija, klub.ime);

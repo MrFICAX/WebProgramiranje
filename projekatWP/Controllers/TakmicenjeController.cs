@@ -118,15 +118,25 @@ namespace projekatWP_bar.Controller
             }
         }
 
-        [Route("UpdateKlub/{imeKluba}")]
+        [Route("UpdateKlub/{id}")]
         [HttpPost]
-        public async Task<IActionResult> UpdateKlub([FromRoute] string imeKluba, [FromBody] Klub klub)
+        public async Task<IActionResult> UpdateKlub([FromRoute] int id, [FromBody] Klub klub)
         {
-            var DobijeniKlub = Context.Klubovi.Where(p => p.Ime == imeKluba).ToList().Last();
-            DobijeniKlub.Ime = klub.Ime;
-            Context.Update(DobijeniKlub);
-            await Context.SaveChangesAsync();
-            return Ok(DobijeniKlub);
+            try
+            {
+
+                var DobijeniKlub = Context.Klubovi.Where(p => p.ID == id).ToList().Last();
+                DobijeniKlub.Ime = klub.Ime;
+                Context.Update(DobijeniKlub);
+                await Context.SaveChangesAsync();
+                return Ok(DobijeniKlub);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return Ok(404);
+
+            }
         }
         [Route("UpdateTakmicar/{imeTakmicara}")]
         [HttpPost]
