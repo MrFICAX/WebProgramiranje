@@ -65,43 +65,73 @@ namespace projekatWP_bar.Controller
         {
             return await Context.Takmicenja.Include(p => p.Klubovi).ThenInclude(q => q.Takmicari).ToListAsync();
         }
+
         //Vraca listu svih klubova
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE        
         [Route("GetKlub")]
         [HttpGet]
         public async Task<List<Klub>> GetKlub()
         {
             return await Context.Klubovi.Include(q => q.Takmicari).ToListAsync();
         }
+
         //Vraca listu svih takmicara
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("GetTakmicar")]
         [HttpGet]
         public async Task<List<Takmicar>> GetTakmicar()
         {
             return await Context.Takmicari.ToListAsync();
         }
+
+        //brise takmicenje sa svim njegovim klubovima i takmicarima
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
+        [Route("DeleteTakmicenje/{id}")]
+        [HttpDelete]
+        public async Task DeleteKlub([FromRoute] int id, [FromBody] Takmicenje takmicenje)
+        {
+            try
+            {
+                var DobijenoTakmicenje = Context.Takmicenja.Where(p => p.ID == id).ToList().Last();
+                List<Klub> DobijeniKlubovi = Context.Klubovi.Where(p => p.Takmicenje == DobijenoTakmicenje).ToList();
+                foreach (Klub klub in DobijeniKlubovi)
+                {
+                    List<Takmicar> Takmicari = Context.Takmicari.Where(p => p.Klub == klub).ToList();
+                    foreach (Takmicar takmicar in Takmicari)
+                        Context.Remove(takmicar);
+                    Context.Remove(klub);
+                }
+                Context.Remove(DobijenoTakmicenje);
+                await Context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
         //brise klub sa svim njegovim takmicarima
         [Route("DeleteKlub/{ime}")]
         [HttpDelete]
         public async Task DeleteKlub([FromRoute] string ime, [FromBody] Klub klub)
         {
-            // try
-            // {
-            var Dobijeniklub = Context.Klubovi.Where(p => p.Ime == ime).ToList().Last();
-            List<Takmicar> Takmicari = Context.Takmicari.Where(p => p.Klub == Dobijeniklub).ToList();
-            foreach (Takmicar element in Takmicari)
-                Context.Remove(element);
+            try
+            {
+                var Dobijeniklub = Context.Klubovi.Where(p => p.Ime == ime).ToList().Last();
+                List<Takmicar> Takmicari = Context.Takmicari.Where(p => p.Klub == Dobijeniklub).ToList();
+                foreach (Takmicar element in Takmicari)
+                    Context.Remove(element);
 
-            Context.Remove(Dobijeniklub);
-            await Context.SaveChangesAsync();
-            //     return StatusCode(200);
-            // }
-            // catch (Exception e)
-            // {
-            //     Console.WriteLine(e);
-            //     return StatusCode(405);
-            // }
+                Context.Remove(Dobijeniklub);
+                await Context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
 
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("DeleteTakmicar/{ime}")]
         [HttpDelete]
         public async Task DeleteTakmicar([FromRoute] string ime, [FromBody] Takmicar takmicar)
@@ -138,6 +168,8 @@ namespace projekatWP_bar.Controller
 
             }
         }
+
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("UpdateTakmicar/{imeTakmicara}")]
         [HttpPost]
         public async Task<IActionResult> UpdateTakmicar([FromRoute] string imeTakmicara, [FromBody] Takmicar takmicar)
