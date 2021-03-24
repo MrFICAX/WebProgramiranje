@@ -2,8 +2,9 @@ import { Klub } from "./klub.js"
 
 export class Takmicenje {
 
-    constructor(id) {
+    constructor(id, ime) {
         this.id = id;
+        this.ime = ime;
         this.broj = 0;
         this.klubovi = [];
         this.container = null;
@@ -12,6 +13,7 @@ export class Takmicenje {
     drawForm(host) {
         this.container = document.createElement("div");
         this.container.classList.add("maincontainer");
+        this.container.classList.add(this.id);
         host.appendChild(this.container);
 
         let div = document.createElement("div");
@@ -19,7 +21,7 @@ export class Takmicenje {
         this.container.appendChild(div);
 
         let pom = document.createElement("h1");
-        pom.innerHTML = "SOFTVER ZA ORGANIZACIJU TURNIRA";
+        pom.innerHTML = "Ime takmicenja: "+this.ime;
         div.appendChild(pom);
 
         let Udiv = document.createElement("div");
@@ -41,14 +43,15 @@ export class Takmicenje {
         pom = document.createElement("input");
         pom.type = "text";
         pom.name = "names";
-        pom.className = "unos names";
+        pom.classList.add("unos", "names", "noviKlub");
         Udiv.appendChild(pom);
 
         pom = document.createElement("button");
         pom.innerHTML = "Unesite klub u sistem";
         pom.className = "unos dugme";
         pom.onclick = (ev) => {
-            if (!this.obradiKlub(document.getElementsByName("names")[0].value)) {
+            var textBox = document.getElementsByClassName("noviKlub")[0];
+            if (!this.obradiKlub(textBox.value)) {
                 return;
             }
             console.log("Klubovi nakon dodavanja novog preko kontrola!");
@@ -59,20 +62,48 @@ export class Takmicenje {
 
         pom = document.createElement("button");
         pom.innerHTML = "Obrisi klub iz sistema";
-        pom.className = "unos dugme disabled";
-        pom.setAttribute("id", "promeni");
+        pom.className = "unos dugme disabled obrisiKlub";
         pom.onclick = (ev) => {
-            this.obrisiKlub(document.getElementsByName("names")[0].value);
+            var textBox = document.getElementsByClassName("noviKlub")[0];
+            this.obrisiKlub(textBox.value);
         }
         Udiv.appendChild(pom);
+
+        console.log(this);
     }
+    dodajTakmicenjeFetch(){
+    
+        fetch("https://localhost:5001/Takmicenje/PostTakmicenje/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                ime: this.ime
+            })
+        });
+    }
+    obrisiTakmicenjeFetch(){
+    
+        fetch("https://localhost:5001/Takmicenje/DeleteTakmicenje/"+this.id, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: this.id,
+                ime: this.ime
+            })
+        });
+    }
+
     dodajKlub(Imekluba) {
 
         if (this.klubovi.some(el => el.ime === Imekluba)) {
             alert("Klub sa ovim imenom vec postoji!");
             return false;
         }
-        this.klubovi.push(new Klub(this.id, Imekluba, new Date()));
+        this.klubovi.push(new Klub(this.id, Imekluba, undefined));
         this.klubovi[this.klubovi.length - 1].Fetch();
 
         return true;
@@ -156,14 +187,14 @@ export class Takmicenje {
         }
     }
     PromeniDugmeIzbrisi() {
-        var element = document.getElementById("promeni");
-        if (element.classList.contains("disabled"))
-            element.classList.remove("disabled");
+        var dobijenoDugme = document.getElementsByClassName("obrisiKlub")[0];
+        if (dobijenoDugme.classList.contains("disabled"))
+        dobijenoDugme.classList.remove("disabled");
         else
-            element.classList.add("disabled");
+        dobijenoDugme.classList.add("disabled");
 
     }
     OcistiImeKluba() {
-        document.getElementsByName("names")[0].value = "";
+        document.getElementsByClassName("noviKlub")[0].value = "";
     }
 }

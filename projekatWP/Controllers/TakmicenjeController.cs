@@ -27,8 +27,7 @@ namespace projekatWP_bar.Controller
         public async Task PostTakmicenje([FromBody] Takmicenje takmicenje)
         {
             try
-            {
-                Context.Takmicenja.Add(takmicenje);
+            {   Context.Takmicenja.Add(takmicenje);
                 await Context.SaveChangesAsync();
             }
             catch (Exception e)
@@ -88,7 +87,7 @@ namespace projekatWP_bar.Controller
         //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("DeleteTakmicenje/{id}")]
         [HttpDelete]
-        public async Task DeleteKlub([FromRoute] int id, [FromBody] Takmicenje takmicenje)
+        public async Task DeleteTakmicenje([FromRoute] int id, [FromBody] Takmicenje takmicenje)
         {
             try
             {
