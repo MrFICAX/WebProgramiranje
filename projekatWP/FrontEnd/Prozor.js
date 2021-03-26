@@ -109,7 +109,11 @@ export class Main {
         pom.innerHTML = "Unesite takmicenje u sistem";
         pom.className = "dugme";
         pom.onclick = (ev) => {
-
+            if(!this.validirajIme(divDodaj))
+             {
+                alert("Niste uneli nijedan karakter!");
+                 return;
+             }  
             let imeTakmicenja = divDodaj.getElementsByClassName("names")[0].value;
             let indeks = parseInt([this.listaTakmicenja[this.listaTakmicenja.length - 1].id]) + 1;
             
@@ -122,6 +126,12 @@ export class Main {
         }
         divDodaj.appendChild(pom);
 
+    }
+    validirajIme(divDodaj){
+        if(divDodaj.getElementsByClassName("names")[0].value == "")
+            return false;
+        else
+            return true;
     }
     ObrisiPostojeceTakmicenje() {
         var element = document.body.getElementsByClassName("maincontainer")[0];

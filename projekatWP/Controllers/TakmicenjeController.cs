@@ -24,16 +24,12 @@ namespace projekatWP_bar.Controller
 
         [Route("PostTakmicenje")]
         [HttpPost]
-        public async Task PostTakmicenje([FromBody] Takmicenje takmicenje)
+        public async Task<IActionResult> PostTakmicenje([FromBody] Takmicenje takmicenje)
         {
-            try
-            {   Context.Takmicenja.Add(takmicenje);
+                Context.Takmicenja.Add(takmicenje);
                 await Context.SaveChangesAsync();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+                List<Takmicenje> lista = await Context.Takmicenja.ToListAsync();
+                return Ok(lista.Last());
         }
 
         [Route("PostKlub/{TakmicenjeID}")]
@@ -44,18 +40,21 @@ namespace projekatWP_bar.Controller
             klub.Takmicenje = takmicenje;
             Context.Klubovi.Add(klub);
             await Context.SaveChangesAsync();
-            return Ok(klub);
+            List<Klub> lista = await Context.Klubovi.ToListAsync();
+            return Ok(lista.Last());
         }
 
-        [Route("PostTakmicar/{imeKluba}")]
+        [Route("PostTakmicar/{idKluba}")]
         [HttpPost]
-        public async Task<IActionResult> PostTakmicar([FromRoute] string imeKluba, [FromBody] Takmicar takmicar)
+        public async Task<IActionResult> PostTakmicar([FromRoute] int idKluba, [FromBody] Takmicar takmicar)
         {
-            var klub = Context.Klubovi.Where(p => p.Ime == imeKluba).ToList().Last();
+            //var klub = Context.Klubovi.Where(p => p.ID == idKluba).ToList().Last();
+            var klub = await Context.Klubovi.FindAsync(idKluba);
             takmicar.Klub = klub;
             Context.Takmicari.Add(takmicar);
             await Context.SaveChangesAsync();
-            return Ok(takmicar);
+            List<Takmicar> lista = await Context.Takmicari.ToListAsync();
+            return Ok(lista.Last());
         }
 
         [Route("GetTakmicenje")]
@@ -69,18 +68,20 @@ namespace projekatWP_bar.Controller
         //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE        
         [Route("GetKlub")]
         [HttpGet]
-        public async Task<List<Klub>> GetKlub()
+        public async Task<Klub> GetKlub()
         {
-            return await Context.Klubovi.Include(q => q.Takmicari).ToListAsync();
+            List<Klub> lista = await Context.Klubovi.ToListAsync();
+            return lista.Last();
         }
 
         //Vraca listu svih takmicara
         //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
-        [Route("GetTakmicar")]
+        [Route("GetPoslednjiTakmicar")]
         [HttpGet]
-        public async Task<List<Takmicar>> GetTakmicar()
+        public async Task<Takmicar> GetPoslednjiTakmicar()
         {
-            return await Context.Takmicari.ToListAsync();
+            List<Takmicar> lista = await Context.Takmicari.ToListAsync();
+            return lista.Last();
         }
 
         //brise takmicenje sa svim njegovim klubovima i takmicarima
@@ -131,19 +132,21 @@ namespace projekatWP_bar.Controller
         }
 
         //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
-        [Route("DeleteTakmicar/{ime}")]
+        [Route("DeleteTakmicar/{ID}")]
         [HttpDelete]
-        public async Task DeleteTakmicar([FromRoute] string ime, [FromBody] Takmicar takmicar)
+        public async Task<IActionResult> DeleteTakmicar([FromRoute] int ID, [FromBody] Takmicar takmicar)
         {
             try
             {
-                var DobijeniTakmicar = Context.Takmicari.Where(p => p.Ime == ime).ToList().Last();
+                var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == ID).ToList().Last();
                 Context.Remove(DobijeniTakmicar);
                 await Context.SaveChangesAsync();
+                return Ok(DobijeniTakmicar);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                return StatusCode(500);
             }
         }
 
@@ -163,21 +166,30 @@ namespace projekatWP_bar.Controller
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return Ok(404);
+                return Ok(500);
 
             }
         }
 
-        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
-        [Route("UpdateTakmicar/{imeTakmicara}")]
+        [Route("UpdateTakmicar/{njegovID}")]
         [HttpPost]
-        public async Task<IActionResult> UpdateTakmicar([FromRoute] string imeTakmicara, [FromBody] Takmicar takmicar)
+        public async Task<IActionResult> UpdateTakmicar([FromRoute] int njegovID, [FromBody] Takmicar takmicar)
         {
-            var DobijeniTakmicar = Context.Takmicari.Where(p => p.Ime == imeTakmicara && p.Klub == takmicar.Klub).ToList().Last();
-            DobijeniTakmicar.Ime = takmicar.Ime;
-            Context.Update(DobijeniTakmicar);
-            await Context.SaveChangesAsync();
-            return Ok(DobijeniTakmicar);
+
+            try
+            {
+                var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == njegovID).ToList().Last();
+                DobijeniTakmicar.Kilaza = takmicar.Kilaza;
+                Context.Update(DobijeniTakmicar);
+                await Context.SaveChangesAsync();
+                return Ok(DobijeniTakmicar);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return Ok(404);
+
+            }
         }
     }
 }

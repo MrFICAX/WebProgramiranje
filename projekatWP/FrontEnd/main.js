@@ -14,10 +14,10 @@ console.log(mejin.listaTakmicenja);
             data.forEach(takmicenje => {
                 const rest1 = new Takmicenje(takmicenje.id, takmicenje.ime);
                 takmicenje.klubovi.forEach(klub => {
-                    var Noviklub = new Klub(klub.id, klub.ime, klub.datum_prijave);
+                    var Noviklub = new Klub(klub.id, takmicenje.id, klub.ime, klub.datum_prijave);
                     rest1.dodajObjekatKlub(Noviklub);
                     klub.takmicari.forEach(takmicari => {
-                        var NoviTakmicar = new Takmicar(takmicari.ime, takmicari.prezime, takmicari.kilaza, takmicari.kategorija, klub.ime);
+                        var NoviTakmicar = new Takmicar(takmicari.ime, takmicari.prezime, takmicari.kilaza, takmicari.kategorija, klub.ime, klub.id, takmicari.id);
                         Noviklub.dodajTakmicara(NoviTakmicar);
                     })
                 })

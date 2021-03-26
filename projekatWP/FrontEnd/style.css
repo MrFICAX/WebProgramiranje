@@ -67,9 +67,12 @@ body{
     justify-content: center;
     border-collapse: collapse;
 }
+.DivSveTabele:hover *{
+    color: rgb(227, 251, 7);
+}
 .DivJednaTabela{
-    margin: 20px;
-    padding: 20px;   
+    margin: 5px;
+    padding: 5px;   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,9 +103,48 @@ body{
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.dugme:hover {
+.dugme:hover, .dugmeUTabeli:hover{
     background-color: chartreuse;
     box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.divUKilazi *{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    
+
+}
+/*
+
+.divUKilazi  {
+    align-items: center;
+    flex-direction: row;
+    margin: 0px;
+
+}
+*/
+.dugmeUTabeli {
+    background-color: #4CAF50;
+    border:2px solid chartreuse;
+    display: table-cell;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 9px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 25px; 
+    width: 60px; 
+}
+.dugmeUTabeliBrisi{
+    font-size: 25px;
+    height: 40px; 
+    width: 80px; 
 }
 .disabled {
     opacity: 0.3;
@@ -118,11 +160,10 @@ body{
     border:  3px dashed black;
     margin: 5px;
     border-collapse: collapse;
+    align-items: center;
     background-image: url("wp2844805.jpg");
 }
-.DivSveTabele:hover *{
-    color: rgb(227, 251, 7);
-}
+
 .contForm1{
     display: flex;
     align-items: center;
@@ -149,9 +190,13 @@ table, th, tr, td
     border: 3px solid mediumaquamarine;
     text-align: center;
 }
-td{
+/*
+td *{
+    
     width:20%;
+    margin: 3px;
 }
+*/
 th{
     background-color: black;
 }
@@ -182,6 +227,10 @@ tr:hover
         background-size: 100% auto;
         color: limegreen;
     }
+    .contForm1{
+        padding: 20px;
+        padding-right: 20px;
+    }
     .divIzborTakmicenja{
         display: flex;
         flex-direction: column;
@@ -201,7 +250,8 @@ tr:hover
         background-size: 100% auto;
     }
 }
-@media only screen and (max-width:1070px) {
+@media only screen and (max-width:1170px) {
+
     .container{ /*prikaz kluba sa ranije prebacuje u flex-direction: column */
         display: flex;
         flex-direction: column;
@@ -211,5 +261,9 @@ tr:hover
 
         border-collapse: collapse;
         background-image: url("wp2844805.jpg");
+    }
+    .contForm1{
+        padding: 20px;
+        padding-right: 20px;
     }
 }

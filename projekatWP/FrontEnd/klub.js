@@ -2,8 +2,9 @@
 import { Takmicar } from "./takmicar.js";
 
 export class Klub {
-    constructor(id, ime, datum_prijave) {
-        this.id = id;
+    constructor(id, idTakmicenja, ime, datum_prijave) {
+        this.id = id; //ID Kluba
+        this.idTakmicenja = idTakmicenja;
         this.ime = ime;
         this.brojT = 0;
         this.arrive_time = this.sqlToJsDate(datum_prijave);
@@ -11,8 +12,8 @@ export class Klub {
         this.container = null;
         this.brojKlikova = false;
     }
-    sqlToJsDate(sqlDate){
-        if(sqlDate == undefined)
+    sqlToJsDate(sqlDate) {
+        if (sqlDate == undefined)
             return new Date();
         //sqlDate in SQL DATETIME format ("yyyy-mm-dd hh:mm:ss.ms")
         var sqlDateArr1 = sqlDate.split("-");
@@ -29,11 +30,11 @@ export class Klub {
         var sqlDateArr4 = sqlDateArr3[2].split(".");
         //format of sqlDateArr4[] = ['ss','ms']
         var sSecond = sqlDateArr4[0];
-         
-        return new Date(sYear,sMonth,sDay,sHour,sMinute,sSecond);
+
+        return new Date(sYear, sMonth, sDay, sHour, sMinute, sSecond);
     }
     Fetch() {
-        fetch("https://localhost:5001/Takmicenje/PostKlub/" + this.id, {
+        fetch("https://localhost:5001/Takmicenje/PostKlub/" + this.idTakmicenja, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -45,7 +46,7 @@ export class Klub {
         }).then(p => {
             if (p.ok) {
                 p.json().then(q => {
-                    alert("Uspesno ste dodali novi klub!");
+                    this.id = q.id;
                 });
             }
             else if (p.status == 406) {
@@ -121,7 +122,7 @@ export class Klub {
         something.className = "imeKluba";
         something.innerHTML = "Ime kluba: " + this.ime;
         contForm1.appendChild(something);
-        
+
         const izmeniIme = document.createElement("div");
         izmeniIme.className = "izmeniIme";
         contForm1.appendChild(izmeniIme);
@@ -205,7 +206,6 @@ export class Klub {
         contForm1.appendChild(something);
         something.onclick = (ev) => {
             this.ObradiTakmicara();
-            this.azurirajBrojTakmicara();
         }
         this.crtajKategorije(this.container);
     }
@@ -213,7 +213,7 @@ export class Klub {
         this.brojKlikova = true;
 
         let izmeniDiv = this.container.getElementsByClassName("izmeniIme")[0];
-       
+
         const izmeniIme = document.createElement("div");
         izmeniIme.className = "izmeniImeDiv";
         izmeniDiv.appendChild(izmeniIme);
@@ -250,7 +250,7 @@ export class Klub {
         this.UpdateKlubFetch();
         this.promeniImeKotrolaSaImenomKluba();
     }
-    promeniImeKotrolaSaImenomKluba(){
+    promeniImeKotrolaSaImenomKluba() {
         var radios = this.container.getElementsByClassName("radioB");
         for (var j = 0; j < radios.length; j++) {
             radios[j].name = this.ime;
@@ -267,7 +267,7 @@ export class Klub {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                id:this.id,
+                id: this.id,
                 ime: this.ime,
                 datum_prijave: this.arrive_time
 
@@ -296,31 +296,63 @@ export class Klub {
             return;
         const tip = CekiranoDugme.value;
 
-        var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime);
-        this.dodajTakmicara(NoviT);
-        switch (tip) {
-            case "KADETI": {
-                this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
-            }
-                break;
 
-            case "JUNIORI":
-                {
-                    this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
-                }
-                break;
+        fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => {
+            p.json().then(data => {
+                var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, data.id+1);
+                this.dodajTakmicara(NoviT);
+                switch (tip) {
+                    case "KADETI": {
+                        this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
+                    }
+                        break;
 
-            case "SENIORI":
-                {
-                    this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
+                    case "JUNIORI":
+                        {
+                            this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
+                        }
+                        break;
+
+                    case "SENIORI":
+                        {
+                            this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
+                        }
+                        break;
+                    default:
+                        alert("GRESKA UNUTAR SWITCH-A!");
+                        break;
                 }
-                break;
-            default:
-                alert("GRESKA UNUTAR SWITCH-A!");
-                break;
-        }
-        NoviT.Fetch();
-        this.OcistiFormu();
+                NoviT.Fetch();
+                this.OcistiFormu();
+                console.log(this.takmicari);
+                this.azurirajBrojTakmicara();
+            });
+        });
+        // var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id);
+        // this.dodajTakmicara(NoviT);
+        // switch (tip) {
+        //     case "KADETI": {
+        //         this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
+        //     }
+        //         break;
+
+        //     case "JUNIORI":
+        //         {
+        //             this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
+        //         }
+        //         break;
+
+        //     case "SENIORI":
+        //         {
+        //             this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
+        //         }
+        //         break;
+        //     default:
+        //         alert("GRESKA UNUTAR SWITCH-A!");
+        //         break;
+        // }
+        // NoviT.Fetch();
+        // this.OcistiFormu();
     }
 
     validiraj(imeTakmicara, prezimeTakmicara, kilazaTakmicara, CekiranoDugme) {
@@ -371,13 +403,77 @@ export class Klub {
         elementReda.innerHTML = Takmicar.prezime;
         noviRed.appendChild(elementReda);
 
+
         elementReda = document.createElement("td");
-        elementReda.innerHTML = Takmicar.kilaza;
+        // elementReda.innerHTML = Takmicar.kilaza;
         noviRed.appendChild(elementReda);
+
+        let divUKilazi = document.createElement("div");
+        divUKilazi.className = "divUKilazi";
+        elementReda.appendChild(divUKilazi);
+
+        let labela = document.createElement("label");
+        labela.className = "kilazaTakmicara";
+        labela.innerHTML = Takmicar.kilaza;
+        divUKilazi.appendChild(labela);
+
+
+        let dugme = document.createElement("button");
+        dugme.innerHTML = "+";
+        dugme.className = "dugmeUTabeli";
+        dugme.onclick = (ev) => {
+            this.promeniKilazu("+", Takmicar);
+        }
+        divUKilazi.appendChild(dugme);
+
+        dugme = document.createElement("button");
+        dugme.innerHTML = "-";
+        dugme.className = "dugmeUTabeli";
+        dugme.onclick = (ev) => {
+            this.promeniKilazu("-", Takmicar);
+        }
+        divUKilazi.appendChild(dugme);
 
         elementReda = document.createElement("td");
         elementReda.innerHTML = Takmicar.kategorija;
         noviRed.appendChild(elementReda);
+
+        // elementReda = document.createElement("td");
+        // noviRed.appendChild(elementReda);
+
+        elementReda = document.createElement("td");
+        noviRed.appendChild(elementReda);
+
+
+
+        dugme = document.createElement("button");
+        dugme.innerHTML = "Obrisi";
+        dugme.className = "dugmeUTabeli dugmeUTabeliBrisi";
+        dugme.onclick = (ev) => {
+            this.obrisiTakmicara(Takmicar, noviRed);
+        }
+        elementReda.appendChild(dugme);
+
+
+    }
+    promeniKilazu(znak, Takmicar) {
+        Takmicar.azurirajKilazu(znak);
+
+        let polje = this.container.querySelector(".kilazaTakmicara");
+        polje.innerHTML = Takmicar.kilaza;
+
+        Takmicar.FetchuUpdate();
+
+    }
+    obrisiTakmicara(Takmicar, tableRow){
+
+        Takmicar.Delete();
+        tableRow.remove();
+        this.takmicari = this.takmicari.filter(takmicar => takmicar.njegovID != Takmicar.njegovID);
+        this.brojT = this.takmicari.length;
+        this.azurirajBrojTakmicara();
+
+
     }
     crtajKategorije(host) {
         if (!host) {
@@ -423,6 +519,10 @@ export class Klub {
 
             e = document.createElement("th");
             e.innerHTML = "KATEGORIJA";
+            red.appendChild(e);
+
+            e = document.createElement("th");
+            e.innerHTML = "DUGMAD";
             red.appendChild(e);
 
         })
