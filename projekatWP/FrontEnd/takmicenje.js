@@ -72,7 +72,7 @@ export class Takmicenje {
 
         console.log(this);
     }
-    dodajTakmicenjeFetch() {
+    dodajTakmicenjeFetch(takmicenje) {
 
         fetch("https://localhost:5001/Takmicenje/PostTakmicenje/", {
             method: "POST",
@@ -86,6 +86,9 @@ export class Takmicenje {
             if (p.ok) {
                 p.json().then(q => {
                     this.id = q.id;
+                    takmicenje.dodajTakmicenje(this);
+                    console.log(takmicenje.listaTakmicenja);
+                    takmicenje.OcistiImeTakmicenja();
                 });
             }
             else if (p.status == 501) {

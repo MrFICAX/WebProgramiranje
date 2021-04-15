@@ -109,26 +109,26 @@ export class Main {
         pom.innerHTML = "Unesite takmicenje u sistem";
         pom.className = "dugme";
         pom.onclick = (ev) => {
-            if(!this.validirajIme(divDodaj))
-             {
+            if (!this.validirajIme(divDodaj)) {
                 alert("Niste uneli nijedan karakter!");
-                 return;
-             }  
+                return;
+            }
             let imeTakmicenja = divDodaj.getElementsByClassName("names")[0].value;
             let indeks = parseInt([this.listaTakmicenja[this.listaTakmicenja.length - 1].id]) + 1;
-            
+
             var novo = new Takmicenje(indeks, imeTakmicenja);//potrebno izmeniti i doraditi jer je potrebno ime takmicenja
-            this.dodajTakmicenje(novo);
-            novo.dodajTakmicenjeFetch();///OVDE TREBA DA SE ISCRTA NOVO TAKMICENJE
+            //this.dodajTakmicenje(novo);
+            novo.dodajTakmicenjeFetch(this);
+
+            ///OVDE TREBA DA SE ISCRTA NOVO TAKMICENJE
             //novo.drawForm(document.body);
-            console.log(this.listaTakmicenja);
-            this.OcistiImeTakmicenja();
+
         }
         divDodaj.appendChild(pom);
 
     }
-    validirajIme(divDodaj){
-        if(divDodaj.getElementsByClassName("names")[0].value == "")
+    validirajIme(divDodaj) {
+        if (divDodaj.getElementsByClassName("names")[0].value == "")
             return false;
         else
             return true;
@@ -154,7 +154,7 @@ export class Main {
 
         //let opcije = element.getElementsByClassName("opcija");
         let opcija = element.getElementsByClassName(id)[0]; //OVDE OBAVEZNO TRAZITI PREKO SELEKTOVANOG IMENA
-                element.removeChild(opcija);
+        element.removeChild(opcija);
         // let zaBrisanje = opcija.find((element) => element.value == id)
         // zaBrisanje.remove();
     }
