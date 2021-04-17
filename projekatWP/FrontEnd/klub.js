@@ -33,7 +33,7 @@ export class Klub {
 
         return new Date(sYear, sMonth, sDay, sHour, sMinute, sSecond);
     }
-    Fetch() {
+    Fetch(takmicenje) {
         fetch("https://localhost:5001/Takmicenje/PostKlub/" + this.idTakmicenja, {
             method: "POST",
             headers: {
@@ -47,6 +47,9 @@ export class Klub {
             if (p.ok) {
                 p.json().then(q => {
                     this.id = q.id;
+                    takmicenje.klubovi.push(this);
+                    this.crtajKlub(takmicenje.container);
+                    takmicenje.azurirajBrojKlubova();
                 });
             }
             else if (p.status == 406) {
@@ -57,7 +60,7 @@ export class Klub {
         });
     }
     ObrisiSaFetch() {
-        fetch("https://localhost:5001/Takmicenje/DeleteKlub/" + this.ime, {
+        fetch("https://localhost:5001/Takmicenje/DeleteKlub/" + this.id, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -238,9 +241,6 @@ export class Klub {
     }
     obrisiUpdateKlub() {
         let parent = this.container.getElementsByClassName("izmeniImeDiv")[0];
-        // let num = parent.childElementCount;
-        // for(let i = 0; i<num;i++)
-        //     parent.childNodes[i].remove();
         parent.remove();
     }
     promeniImeKluba() {
@@ -299,60 +299,38 @@ export class Klub {
 
         fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => {
             p.json().then(data => {
-                var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, data.id+1);
-                this.dodajTakmicara(NoviT);
-                switch (tip) {
-                    case "KADETI": {
-                        this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
+                var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, data.id + 1);
+                var povratnaVr = NoviT.Fetch();
+                if (povratnaVr == Response.ok) {
+                    this.dodajTakmicara(NoviT);
+
+                    switch (tip) {
+                        case "KADETI": {
+                            this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
+                        }
+                            break;
+
+                        case "JUNIORI":
+                            {
+                                this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
+                            }
+                            break;
+
+                        case "SENIORI":
+                            {
+                                this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
+                            }
+                            break;
+                        default:
+                            alert("GRESKA UNUTAR SWITCH-A!");
+                            break;
                     }
-                        break;
-
-                    case "JUNIORI":
-                        {
-                            this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
-                        }
-                        break;
-
-                    case "SENIORI":
-                        {
-                            this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
-                        }
-                        break;
-                    default:
-                        alert("GRESKA UNUTAR SWITCH-A!");
-                        break;
+                    this.OcistiFormu();
+                    console.log(this.takmicari);
+                    this.azurirajBrojTakmicara();
                 }
-                NoviT.Fetch();
-                this.OcistiFormu();
-                console.log(this.takmicari);
-                this.azurirajBrojTakmicara();
             });
         });
-        // var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id);
-        // this.dodajTakmicara(NoviT);
-        // switch (tip) {
-        //     case "KADETI": {
-        //         this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaKADETI"));
-        //     }
-        //         break;
-
-        //     case "JUNIORI":
-        //         {
-        //             this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaJUNIORI"));
-        //         }
-        //         break;
-
-        //     case "SENIORI":
-        //         {
-        //             this.crtajTakmicara(NoviT, this.container.getElementsByClassName("tabelaSENIORI"));
-        //         }
-        //         break;
-        //     default:
-        //         alert("GRESKA UNUTAR SWITCH-A!");
-        //         break;
-        // }
-        // NoviT.Fetch();
-        // this.OcistiFormu();
     }
 
     validiraj(imeTakmicara, prezimeTakmicara, kilazaTakmicara, CekiranoDugme) {
@@ -377,9 +355,8 @@ export class Klub {
             alert("Lose ste uneli kilazu!");
             return false;
         }
-        else {
+        else
             return true;
-        }
     }
     dodajTakmicara(Takmicar) {
         this.takmicari.push(Takmicar);
@@ -438,13 +415,8 @@ export class Klub {
         elementReda.innerHTML = Takmicar.kategorija;
         noviRed.appendChild(elementReda);
 
-        // elementReda = document.createElement("td");
-        // noviRed.appendChild(elementReda);
-
         elementReda = document.createElement("td");
         noviRed.appendChild(elementReda);
-
-
 
         dugme = document.createElement("button");
         dugme.innerHTML = "Obrisi";
@@ -453,8 +425,6 @@ export class Klub {
             this.obrisiTakmicara(Takmicar, noviRed);
         }
         elementReda.appendChild(dugme);
-
-
     }
     promeniKilazu(znak, Takmicar) {
         Takmicar.azurirajKilazu(znak);
@@ -463,17 +433,13 @@ export class Klub {
         polje.innerHTML = Takmicar.kilaza;
 
         Takmicar.FetchuUpdate();
-
     }
-    obrisiTakmicara(Takmicar, tableRow){
+    obrisiTakmicara(Takmicar, tableRow) {
 
         Takmicar.Delete();
         tableRow.remove();
         this.takmicari = this.takmicari.filter(takmicar => takmicar.njegovID != Takmicar.njegovID);
-        this.brojT = this.takmicari.length;
         this.azurirajBrojTakmicara();
-
-
     }
     crtajKategorije(host) {
         if (!host) {

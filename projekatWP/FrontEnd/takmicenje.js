@@ -8,7 +8,6 @@ export class Takmicenje {
         this.broj = 0;
         this.klubovi = [];
         this.container = null;
-        this.indeksKluba = null;
     }
 
     drawForm(host) {
@@ -97,7 +96,6 @@ export class Takmicenje {
         }).catch(p => {
             alert("Error");
         });
-        //location.reload();
     }
     obrisiTakmicenjeFetch() {
 
@@ -121,18 +119,20 @@ export class Takmicenje {
         this.FetchGetKlub(Imekluba);
         return true;
     }
-    FetchGetKlub(Imekluba) {
-        fetch("https://localhost:5001/Takmicenje/GetKlub").then(p => {
-            p.json().then(data => {
-                this.klubovi.push(new Klub(data.id + 1, this.id, Imekluba, undefined));
-                this.klubovi[this.klubovi.length - 1].Fetch();
-
-
-                this.klubovi[this.klubovi.length - 1].crtajKlub(this.container);
-                this.broj = this.klubovi.length;
-                this.azurirajBrojKlubova();
-            });
-        });
+    // FetchGetKlub(Imekluba) {
+    //     fetch("https://localhost:5001/Takmicenje/GetKlub").then(p => { //OVO SE NE RADI NA OVAJ NACIN, ALI "IF IT WORKS, DON'T TOUCH IT"
+    //         p.json().then(data => {
+    //             this.klubovi.push(new Klub(data.id + 1, this.id, Imekluba, undefined));
+    //             this.klubovi[this.klubovi.length - 1].Fetch();
+    //             this.klubovi[this.klubovi.length - 1].crtajKlub(this.container);
+    //             this.broj = this.klubovi.length;
+    //             this.azurirajBrojKlubova();
+    //         });
+    //     });
+    // }
+    FetchGetKlub(ImeKluba){
+        let klub = new Klub(undefined, this.id, ImeKluba, undefined);
+        klub.Fetch(this);
     }
     dodajObjekatKlub(Klub) {
         this.klubovi.push(Klub);
@@ -142,95 +142,83 @@ export class Takmicenje {
             alert("Unesite ime kluba!");
             return false;
         }
-        // var letters = /^[A-Za-z 0-9]+$/;
-        // if (!a.match(letters)) {
-        //     alert("Ime kluba mora imati sve!");
-        //     return false;
-        // }
-        // letters = ["q",'w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
-        // if (!a.includes(letters)) {
-        //     alert("Ime kluba mora imati slova!");
-        //     return false;
-        // }
 
+        if (this.broj === 0)
+            this.PromeniDugmeIzbrisi();
 
-            if (this.broj === 0)
-                this.PromeniDugmeIzbrisi();
+        var povratniBool = this.dodajKlub(a);
+        if (!povratniBool) {
+            return false;
+        }
+        return true;
+    }
+    azurirajBrojKlubova() {
+        this.broj = this.klubovi.length;
+        let element = document.getElementsByClassName("brojKlubova")[0];
+        element.innerHTML = "Ukupno prijavljeno klubova: " + this.broj;
+    }
+    crtajSveKlubove() {
+        // this.klubovi.forEach(element => element.crtajKlub(this.container));
+        for (let i = 0; i < this.klubovi.length; i++) {
+            this.klubovi[i].crtajKlub(this.container);
+        };
+        this.azurirajBrojKlubova();
+        if (this.broj !== 0)
+            this.PromeniDugmeIzbrisi();
+        console.log("Klubovi nakon crtanja svih klubova dobijenih iz baze ");
+        this.logujUKonzoluKlubove();
+    }
+    logujUKonzoluKlubove() {
+        console.log(this.klubovi);
+    }
 
-            var povratniBool = this.dodajKlub(a);
-            if (!povratniBool) {
-                return false;
+    obrisiKlub(a) {
+
+        let pom = document.getElementsByClassName("container"); //CEO DIV ELEMENT KOJI PREDSTAVLJA KLUB
+        if (pom[0] == null) {
+            alert("Ne postoji nijedan klub u bazi za ovo takmicenje!");
+            return;
+        }
+
+        if (!a) {
+            alert("Unesite ime kluba!");
+            return;
+        }
+
+        var Klub = this.klubovi.find(element => element.ime == a);
+        if (Klub !== undefined) {
+
+            for (let i = 0; i < pom.length; i++) {
+                let hElement = pom[i].getElementsByClassName("imeKluba");
+                let string = hElement[0].innerHTML;
+                if (string.includes(a)) {
+                    pom[i].remove();
+                }
             }
-            return true;
-        }
-        azurirajBrojKlubova() {
-            let element = document.getElementsByClassName("brojKlubova")[0];
-            element.innerHTML = "Ukupno prijavljeno klubova: " + this.broj;
-        }
-        crtajSveKlubove() {
-            // this.klubovi.forEach(element => element.crtajKlub(this.container));
-            for (let i = 0; i < this.klubovi.length; i++) {
-                this.klubovi[i].crtajKlub(this.container);
-            };
-            this.broj = this.klubovi.length;
-            if (this.broj !== 0)
-                this.PromeniDugmeIzbrisi();
+
+            Klub.ObrisiSaFetch();
+            this.klubovi = this.klubovi.filter(klub => klub.ime != a);
             this.azurirajBrojKlubova();
-            console.log("Klubovi nakon crtanja svih klubova dobijenih iz baze ");
+            this.OcistiImeKluba();
+            if (this.broj == 0)
+                this.PromeniDugmeIzbrisi();
+
+            console.log("Klubovi nakon brisanja: ");
             this.logujUKonzoluKlubove();
         }
-        logujUKonzoluKlubove() {
-            console.log(this.klubovi);
-        }
-
-        obrisiKlub(a) {
-
-            let pom = document.getElementsByClassName("container"); //CEO DIV ELEMENT KOJI PREDSTAVLJA KLUB
-            if (pom[0] == null) {
-                alert("Ne postoji nijedan klub u bazi za ovo takmicenje!");
-                return;
-            }
-
-            if (!a) {
-                alert("Unesite ime kluba!");
-                return;
-            }
-
-            var Klub = this.klubovi.find(element => element.ime == a);
-            if (Klub !== undefined) {
-
-                for (let i = 0; i < pom.length; i++) {
-                    let hElement = pom[i].getElementsByClassName("imeKluba");
-                    let string = hElement[0].innerHTML;
-                    if (string.includes(a)) {
-                        pom[i].remove();
-                    }
-                }
-
-                Klub.ObrisiSaFetch();
-                this.klubovi = this.klubovi.filter(klub => klub.ime != a);
-                this.broj = this.klubovi.length;
-                this.azurirajBrojKlubova();
-                this.OcistiImeKluba();
-                if (this.broj == 0)
-                    this.PromeniDugmeIzbrisi();
-
-                console.log("Klubovi nakon brisanja: ");
-                this.logujUKonzoluKlubove();
-            }
-            else {
-                alert("Ne postoji klub sa ovim nazivom!");
-            }
-        }
-        PromeniDugmeIzbrisi() {
-            var dobijenoDugme = document.getElementsByClassName("obrisiKlub")[0];
-            if (dobijenoDugme.classList.contains("disabled"))
-                dobijenoDugme.classList.remove("disabled");
-            else
-                dobijenoDugme.classList.add("disabled");
-
-        }
-        OcistiImeKluba() {
-            document.getElementsByClassName("noviKlub")[0].value = "";
+        else {
+            alert("Ne postoji klub sa ovim nazivom!");
         }
     }
+    PromeniDugmeIzbrisi() {
+        var dobijenoDugme = document.getElementsByClassName("obrisiKlub")[0];
+        if (dobijenoDugme.classList.contains("disabled"))
+            dobijenoDugme.classList.remove("disabled");
+        else
+            dobijenoDugme.classList.add("disabled");
+
+    }
+    OcistiImeKluba() {
+        document.getElementsByClassName("noviKlub")[0].value = "";
+    }
+}

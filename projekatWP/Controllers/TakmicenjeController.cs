@@ -111,13 +111,13 @@ namespace projekatWP_bar.Controller
         }
 
         //brise klub sa svim njegovim takmicarima
-        [Route("DeleteKlub/{ime}")]
+        [Route("DeleteKlub/{id}")]
         [HttpDelete]
-        public async Task DeleteKlub([FromRoute] string ime, [FromBody] Klub klub)
+        public async Task DeleteKlub([FromRoute] int id, [FromBody] Klub klub)
         {
             try
             {
-                var Dobijeniklub = Context.Klubovi.Where(p => p.Ime == ime).ToList().Last();
+                var Dobijeniklub = Context.Klubovi.Where(p => p.ID == id).ToList().Last();
                 List<Takmicar> Takmicari = Context.Takmicari.Where(p => p.Klub == Dobijeniklub).ToList();
                 foreach (Takmicar element in Takmicari)
                     Context.Remove(element);

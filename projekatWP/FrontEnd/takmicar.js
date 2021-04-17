@@ -30,13 +30,16 @@ export class Takmicar {
             if (p.ok) {
                 p.json().then(q => {
                     this.njegovID = q.id;
+                    return p;
                 });
             }
             else if (p.status == 406) {
                 alert("Input all informations.");
+                return p;
             }
         }).catch(p => {
             alert("Error");
+            return p;
         });
     }
     FetchuUpdate() {

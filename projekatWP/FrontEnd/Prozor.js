@@ -61,14 +61,6 @@ export class Main {
         izbor.appendChild(labela);
         izbor.appendChild(izaberiTakmicenje);
 
-        // let opcija;
-        // for (let i = 0; i < this.listaTakmicenja.length; i++) {
-        //     opcija = document.createElement("option");
-        //     opcija.innerHTML = i;
-        //     opcija.value = i;
-        //     izaberiTakmicenje.appendChild(opcija);
-        // }
-
         divIzbor1.appendChild(izbor);
 
         pom = document.createElement("button");
@@ -83,9 +75,10 @@ export class Main {
             if (this.trenutnoTakmicenje === NadjenoTakmicenje) {
                 this.ObrisiPostojeceTakmicenje();
             }
+            this.listaTakmicenja = this.listaTakmicenja.filter(function(el) { return el.id != NadjenoTakmicenje.id; }); 
             this.obrisiOpciju(id);//PROVERI DA LI SE LEPO SALJE ID, AKO NE, POSALJI NEKU DRUGU VREDNOST
             //GLAVNA STVAR JE KOJA SE KLASA DODAJE OPCIJAMA JER PREKO TIH KLASA TRAZIS OPCIJU ZA BRISANJE
-
+            console.log(this.listaTakmicenja);
         }
         divIzbor1.appendChild(pom);
 
@@ -116,13 +109,10 @@ export class Main {
             let imeTakmicenja = divDodaj.getElementsByClassName("names")[0].value;
             let indeks = parseInt([this.listaTakmicenja[this.listaTakmicenja.length - 1].id]) + 1;
 
-            var novo = new Takmicenje(indeks, imeTakmicenja);//potrebno izmeniti i doraditi jer je potrebno ime takmicenja
+            var novo = new Takmicenje(indeks, imeTakmicenja);
+            novo.dodajTakmicenjeFetch(this); //ovoj metodi prosledjujemo this, da bi se u then() odradile metode zavisne od Fetch-a
+            //Metode koje se izvrsavaju u dodajTakmicenjeFetch metodi
             //this.dodajTakmicenje(novo);
-            novo.dodajTakmicenjeFetch(this);
-
-            ///OVDE TREBA DA SE ISCRTA NOVO TAKMICENJE
-            //novo.drawForm(document.body);
-
         }
         divDodaj.appendChild(pom);
 
@@ -145,18 +135,14 @@ export class Main {
         opcija = document.createElement("option");
         opcija.innerHTML = takmicenje.ime;
         opcija.classList.add("opcija");
-        opcija.classList.add(takmicenje.id); ///OVO OBAVEZNO ISPRAVITI KADA SE DODAJE U LISTU
+        opcija.classList.add(takmicenje.id);
         opcija.value = takmicenje.id;
         element.appendChild(opcija);
     }
     obrisiOpciju(id) {
         let element = document.getElementsByClassName("selekcija")[0];
-
-        //let opcije = element.getElementsByClassName("opcija");
-        let opcija = element.getElementsByClassName(id)[0]; //OVDE OBAVEZNO TRAZITI PREKO SELEKTOVANOG IMENA
+        let opcija = element.getElementsByClassName(id)[0]; //OVDE OBAVEZNO TRAZITI PREKO SELEKTOVANOG ID-ja
         element.removeChild(opcija);
-        // let zaBrisanje = opcija.find((element) => element.value == id)
-        // zaBrisanje.remove();
     }
     OcistiImeTakmicenja() {
         document.getElementsByClassName("novoTakmicenje")[0].value = "";
