@@ -77,7 +77,6 @@ export class Klub {
 
         this.container = document.createElement("div");
         this.container.classList.add("container");
-        // this.container.classList.add(this.ime);
         host.appendChild(this.container);
 
         this.drawForm(this.container);
@@ -85,8 +84,6 @@ export class Klub {
         //OVDE SE ULAZI SAMO AKO KLUB VEC SADRZI TAKMICARE, TO SU KLUBOVI KOJI SE POZIVAJU IZ BAZE
         if (this.takmicari.length > 0) {
             for (let i = 0; i < this.takmicari.length; i++) {
-                //    console.log(this.klubovi);
-                //    console.log(i);
                 switch (this.takmicari[i].kategorija) {
                     case "KADETI": {
                         this.crtajTakmicara(this.takmicari[i], this.container.getElementsByClassName("tabelaKADETI"));
@@ -165,7 +162,6 @@ export class Klub {
         something.className = "prezime";
         contForm1.appendChild(something);
 
-
         something = document.createElement("label");
         something.innerHTML = "Unesite kilazu:";
         contForm1.appendChild(something);
@@ -214,7 +210,6 @@ export class Klub {
     }
     crtajUpdateImeKluba() {
         this.brojKlikova = true;
-
         let izmeniDiv = this.container.getElementsByClassName("izmeniIme")[0];
 
         const izmeniIme = document.createElement("div");
@@ -270,7 +265,6 @@ export class Klub {
                 id: this.id,
                 ime: this.ime,
                 datum_prijave: this.arrive_time
-
             })
         }).then(p => {
             if (p.ok) {
@@ -286,7 +280,6 @@ export class Klub {
         });
     }
     ObradiTakmicara() {
-
         const imeTakmicara = this.container.querySelector(".ime").value;
         const prezimeTakmicara = this.container.querySelector(".prezime").value;
         const kilazaTakmicara = parseInt(this.container.querySelector(".kilaza").value);
@@ -296,8 +289,7 @@ export class Klub {
             return;
         const tip = CekiranoDugme.value;
 
-
-        fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => {
+        fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => { //OVO SE NE RADI OVAKO
             p.json().then(data => {
                 var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, data.id + 1);
                 var povratnaVr = NoviT.Fetch();
@@ -332,7 +324,6 @@ export class Klub {
             });
         });
     }
-
     validiraj(imeTakmicara, prezimeTakmicara, kilazaTakmicara, CekiranoDugme) {
         if (CekiranoDugme == null) {
             alert("Niste odabrali kategoriju!");
@@ -342,7 +333,6 @@ export class Klub {
             alert("Lose ste uneli ime!");
             return false;
         }
-
         if (/[^a-zA-Z]/.test(prezimeTakmicara) || prezimeTakmicara == "") {
             alert("Lose ste uneli prezime!");
             return false;
@@ -366,7 +356,6 @@ export class Klub {
         var element = this.container.getElementsByClassName("brojT")[0];
         element.innerHTML = "Broj takmicara: " + this.brojT;
     }
-
     crtajTakmicara(Takmicar, kontejner) {
 
         var noviRed = document.createElement("tr");
@@ -380,9 +369,7 @@ export class Klub {
         elementReda.innerHTML = Takmicar.prezime;
         noviRed.appendChild(elementReda);
 
-
         elementReda = document.createElement("td");
-        // elementReda.innerHTML = Takmicar.kilaza;
         noviRed.appendChild(elementReda);
 
         let divUKilazi = document.createElement("div");
@@ -393,7 +380,6 @@ export class Klub {
         labela.className = "kilazaTakmicara";
         labela.innerHTML = Takmicar.kilaza;
         divUKilazi.appendChild(labela);
-
 
         let dugme = document.createElement("button");
         dugme.innerHTML = "+";
@@ -474,7 +460,6 @@ export class Klub {
             e.innerHTML = "IME";
             red.appendChild(e);
 
-
             e = document.createElement("th");
             e.innerHTML = "PREZIME";
             red.appendChild(e);
@@ -490,7 +475,6 @@ export class Klub {
             e = document.createElement("th");
             e.innerHTML = "DUGMAD";
             red.appendChild(e);
-
         })
     }
     OcistiFormu() {
