@@ -338,11 +338,11 @@ export class Klub {
             return false;
         }
         if (Number.isNaN(kilazaTakmicara) || kilazaTakmicara < 20 || kilazaTakmicara > 200) {
-            alert("Lose ste kilazu!");
+            alert("Kilaza nije u referentnim vrednostima! 20<Kilaza<200");
             return false;
         }
         if (!(CekiranoDugme.value === "KADETI" || CekiranoDugme.value === "JUNIORI" || CekiranoDugme.value === "SENIORI")) {
-            alert("Lose ste uneli kilazu!");
+            alert("Niste izabrali uzrast!");
             return false;
         }
         else

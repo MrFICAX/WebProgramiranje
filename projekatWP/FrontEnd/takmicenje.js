@@ -119,17 +119,6 @@ export class Takmicenje {
         this.FetchGetKlub(Imekluba);
         return true;
     }
-    // FetchGetKlub(Imekluba) {
-    //     fetch("https://localhost:5001/Takmicenje/GetKlub").then(p => { //OVO SE NE RADI NA OVAJ NACIN, ALI "IF IT WORKS, DON'T TOUCH IT"
-    //         p.json().then(data => {
-    //             this.klubovi.push(new Klub(data.id + 1, this.id, Imekluba, undefined));
-    //             this.klubovi[this.klubovi.length - 1].Fetch();
-    //             this.klubovi[this.klubovi.length - 1].crtajKlub(this.container);
-    //             this.broj = this.klubovi.length;
-    //             this.azurirajBrojKlubova();
-    //         });
-    //     });
-    // }
     FetchGetKlub(ImeKluba){
         let klub = new Klub(undefined, this.id, ImeKluba, undefined);
         klub.Fetch(this);

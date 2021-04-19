@@ -85,7 +85,6 @@ namespace projekatWP_bar.Controller
         }
 
         //brise takmicenje sa svim njegovim klubovima i takmicarima
-        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("DeleteTakmicenje/{id}")]
         [HttpDelete]
         public async Task DeleteTakmicenje([FromRoute] int id, [FromBody] Takmicenje takmicenje)
@@ -131,7 +130,6 @@ namespace projekatWP_bar.Controller
             }
         }
 
-        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
         [Route("DeleteTakmicar/{ID}")]
         [HttpDelete]
         public async Task<IActionResult> DeleteTakmicar([FromRoute] int ID, [FromBody] Takmicar takmicar)
