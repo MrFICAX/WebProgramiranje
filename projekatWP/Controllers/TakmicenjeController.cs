@@ -26,10 +26,10 @@ namespace projekatWP_bar.Controller
         [HttpPost]
         public async Task<IActionResult> PostTakmicenje([FromBody] Takmicenje takmicenje)
         {
-                Context.Takmicenja.Add(takmicenje);
-                await Context.SaveChangesAsync();
-                List<Takmicenje> lista = await Context.Takmicenja.ToListAsync();
-                return Ok(lista.Last());
+            Context.Takmicenja.Add(takmicenje);
+            await Context.SaveChangesAsync();
+            List<Takmicenje> lista = await Context.Takmicenja.ToListAsync();
+            return Ok(lista.Last());
         }
 
         [Route("PostKlub/{TakmicenjeID}")]
@@ -64,8 +64,9 @@ namespace projekatWP_bar.Controller
             return await Context.Takmicenja.Include(p => p.Klubovi).ThenInclude(q => q.Takmicari).ToListAsync();
         }
 
-        //Vraca listu svih klubova
-        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE        
+        //Vraca poslednji klub u tabeli iz baze
+        //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE 
+        //LOS NACIN ZA DEFIINISANJE METODE       
         [Route("GetKlub")]
         [HttpGet]
         public async Task<Klub> GetKlub()
@@ -74,13 +75,16 @@ namespace projekatWP_bar.Controller
             return lista.Last();
         }
 
-        //Vraca listu svih takmicara
+        //Vraca poslednjeg takmicara u tabeli iz baze
         //NIJE DEFINISAN FETCH SA POZIVOM OVE METODE
+        //LOS NACIN ZA DEFIINISANJE METODE       
         [Route("GetPoslednjiTakmicar")]
         [HttpGet]
         public async Task<Takmicar> GetPoslednjiTakmicar()
         {
             List<Takmicar> lista = await Context.Takmicari.ToListAsync();
+            if(lista == null)
+                return null;
             return lista.Last();
         }
 
@@ -91,6 +95,7 @@ namespace projekatWP_bar.Controller
         {
             try
             {
+
                 var DobijenoTakmicenje = Context.Takmicenja.Where(p => p.ID == id).ToList().Last();
                 List<Klub> DobijeniKlubovi = Context.Klubovi.Where(p => p.Takmicenje == DobijenoTakmicenje).ToList();
                 foreach (Klub klub in DobijeniKlubovi)
@@ -102,6 +107,15 @@ namespace projekatWP_bar.Controller
                 }
                 Context.Remove(DobijenoTakmicenje);
                 await Context.SaveChangesAsync();
+                /*
+                var dobijenoTakmicenje = await Context.Takmicenja.Where(p=> p.ID == id).Include(q => q.Klubovi).FirstOrDefaultAsync();
+                foreach (var item in dobijenoTakmicenje.Klubovi)
+                {
+                    Context.Remove(item);
+                }
+                Context.Remove(dobijenoTakmicenje);
+            await Context.SaveChangesAsync();
+                */
             }
             catch (Exception e)
             {
@@ -137,6 +151,8 @@ namespace projekatWP_bar.Controller
             try
             {
                 var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == ID).ToList().Last();
+                if (DobijeniTakmicar == null)
+                    return StatusCode(505);
                 Context.Remove(DobijeniTakmicar);
                 await Context.SaveChangesAsync();
                 return Ok(DobijeniTakmicar);
@@ -155,16 +171,18 @@ namespace projekatWP_bar.Controller
             try
             {
 
-                var DobijeniKlub = Context.Klubovi.Where(p => p.ID == id).ToList().Last();
+                Klub DobijeniKlub = Context.Klubovi.Where(p => p.ID == id).ToList().Last();
+                if (DobijeniKlub == null)
+                    return StatusCode(404);
                 DobijeniKlub.Ime = klub.Ime;
-                Context.Update(DobijeniKlub);
+                Context.Update<Klub>(DobijeniKlub);
                 await Context.SaveChangesAsync();
                 return Ok(DobijeniKlub);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return Ok(500);
+                return StatusCode(500);
 
             }
         }
@@ -176,7 +194,10 @@ namespace projekatWP_bar.Controller
 
             try
             {
-                var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == njegovID).ToList().Last();
+                var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == njegovID).ToList().FirstOrDefault();
+                //var DobijeniTakmicar = await Context.Takmicari.FindAsync(njegovID); //OVO JE MNOGO BOLJE RESENJE
+                if(DobijeniTakmicar == null)
+                    return StatusCode(502);
                 DobijeniTakmicar.Kilaza = takmicar.Kilaza;
                 Context.Update(DobijeniTakmicar);
                 await Context.SaveChangesAsync();
@@ -185,8 +206,7 @@ namespace projekatWP_bar.Controller
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return Ok(404);
-
+                return StatusCode(500);
             }
         }
     }

@@ -61,8 +61,8 @@ export class Takmicar {
                     //alert("Uspesno ste izmeni takmicara!");
                 });
             }
-            else if (p.status == 406) {
-                alert("Input all informations.");
+            else if (p.status == 502) {
+                alert("Greska! Ne postoji instanca u bazi!");
             }
         }).catch(p => {
             alert("Error");
@@ -84,13 +84,18 @@ export class Takmicar {
         }).then(p => {
             if (p.ok) {
                 p.json().then(q => {
-                    return
+                    console.log(p);
+                    console.log(q);
                 });
             }
             else if (p.status == 406) {
                 alert("Input all informations.");
             }
+            else{
+                alert("Status code "+ p.status +" not found");
+            }
         }).catch(p => {
+            console.log(p);
             alert("Error");
         });
     }
