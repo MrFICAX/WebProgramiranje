@@ -289,10 +289,10 @@ export class Klub {
             return;
         const tip = CekiranoDugme.value;
 
-        fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => { //OVO SE NE RADI OVAKO
-            p.json().then(data => {
-                var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, data.id + 1);
-                var povratnaVr = NoviT.Fetch();
+        // fetch("https://localhost:5001/Takmicenje/GetPoslednjiTakmicar").then(p => { //OVO SE NE RADI OVAKO
+        //     p.json().then(data => { //OVO SE NE RADI OVAKO
+                var NoviT = new Takmicar(imeTakmicara, prezimeTakmicara, kilazaTakmicara, tip, this.ime, this.id, undefined); 
+                var povratnaVr = NoviT.Fetch(); // OVDE SE AZURIRA ID NEMA NIKAKVOG UTICAJA JER SE POZIVOM OVE METODE TAJ ID TAKMICARA PROMENI
                 if (povratnaVr == Response.ok) {
                     this.dodajTakmicara(NoviT);
 
@@ -321,8 +321,8 @@ export class Klub {
                     console.log(this.takmicari);
                     this.azurirajBrojTakmicara();
                 }
-            });
-        });
+            // });
+        // });
     }
     validiraj(imeTakmicara, prezimeTakmicara, kilazaTakmicara, CekiranoDugme) {
         if (CekiranoDugme == null) {
@@ -485,5 +485,8 @@ export class Klub {
         for (var j = 0; j < radios.length; j++) {
             radios[j].checked = false;
         }
+        // radios.forEach(element =>{
+        //     element.checked = false;
+        // })
     }
 }

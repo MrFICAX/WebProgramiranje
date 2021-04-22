@@ -5,7 +5,7 @@ import { Takmicenje } from "./takmicenje.js"
 // const t = new Takmicenje(1);
 // t.drawForm(document.body);
 
-export class Main {
+export class Prozor {
 
     constructor() {
         this.listaTakmicenja = [];
@@ -76,8 +76,7 @@ export class Main {
                 this.ObrisiPostojeceTakmicenje();
             }
             this.listaTakmicenja = this.listaTakmicenja.filter(function(el) { return el.id != NadjenoTakmicenje.id; }); 
-            this.obrisiOpciju(id);//PROVERI DA LI SE LEPO SALJE ID, AKO NE, POSALJI NEKU DRUGU VREDNOST
-            //GLAVNA STVAR JE KOJA SE KLASA DODAJE OPCIJAMA JER PREKO TIH KLASA TRAZIS OPCIJU ZA BRISANJE
+            this.obrisiOpciju(id);
             console.log(this.listaTakmicenja);
         }
         divIzbor1.appendChild(pom);
