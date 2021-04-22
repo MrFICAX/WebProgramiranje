@@ -83,7 +83,7 @@ namespace projekatWP_bar.Controller
         public async Task<Takmicar> GetPoslednjiTakmicar()
         {
             List<Takmicar> lista = await Context.Takmicari.ToListAsync();
-            if(lista == null)
+            if (lista == null)
                 return null;
             return lista.Last();
         }
@@ -91,11 +91,11 @@ namespace projekatWP_bar.Controller
         //brise takmicenje sa svim njegovim klubovima i takmicarima
         [Route("DeleteTakmicenje/{id}")]
         [HttpDelete]
-        public async Task DeleteTakmicenje([FromRoute] int id, [FromBody] Takmicenje takmicenje)
+        public async Task<IActionResult> DeleteTakmicenje([FromRoute] int id, [FromBody] Takmicenje takmicenje)
         {
             try
             {
-
+                /*
                 var DobijenoTakmicenje = Context.Takmicenja.Where(p => p.ID == id).ToList().Last();
                 List<Klub> DobijeniKlubovi = Context.Klubovi.Where(p => p.Takmicenje == DobijenoTakmicenje).ToList();
                 foreach (Klub klub in DobijeniKlubovi)
@@ -107,19 +107,23 @@ namespace projekatWP_bar.Controller
                 }
                 Context.Remove(DobijenoTakmicenje);
                 await Context.SaveChangesAsync();
-                /*
-                var dobijenoTakmicenje = await Context.Takmicenja.Where(p=> p.ID == id).Include(q => q.Klubovi).FirstOrDefaultAsync();
-                foreach (var item in dobijenoTakmicenje.Klubovi)
-                {
-                    Context.Remove(item);
-                }
-                Context.Remove(dobijenoTakmicenje);
-            await Context.SaveChangesAsync();
                 */
+                var dobijenoTakmicenje = await Context.Takmicenja.Where(p => p.ID == id).Include(q => q.Klubovi).ThenInclude(q => q.Takmicari).FirstOrDefaultAsync();
+                    if(dobijenoTakmicenje== null)
+                        return StatusCode(404);
+                // dobijenoTakmicenje.Klubovi.ForEach(k =>
+                // {
+                //     k.Takmicari.ForEach(n => Context.Takmicari.Remove(n));
+                //     Context.Klubovi.Remove(k);
+                // });
+                Context.Remove(dobijenoTakmicenje);
+                await Context.SaveChangesAsync();
+                return Ok(200);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                return StatusCode(500);
             }
         }
 
@@ -152,7 +156,7 @@ namespace projekatWP_bar.Controller
             {
                 var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == ID).ToList().Last();
                 if (DobijeniTakmicar == null)
-                    return StatusCode(505);
+                    return StatusCode(404);
                 Context.Remove(DobijeniTakmicar);
                 await Context.SaveChangesAsync();
                 return Ok(DobijeniTakmicar);
@@ -196,8 +200,8 @@ namespace projekatWP_bar.Controller
             {
                 var DobijeniTakmicar = Context.Takmicari.Where(p => p.ID == njegovID).ToList().FirstOrDefault();
                 //var DobijeniTakmicar = await Context.Takmicari.FindAsync(njegovID); //OVO JE MNOGO BOLJE RESENJE
-                if(DobijeniTakmicar == null)
-                    return StatusCode(502);
+                if (DobijeniTakmicar == null)
+                    return StatusCode(404);
                 DobijeniTakmicar.Kilaza = takmicar.Kilaza;
                 Context.Update(DobijeniTakmicar);
                 await Context.SaveChangesAsync();

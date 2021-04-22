@@ -61,7 +61,7 @@ export class Takmicar {
                     //alert("Uspesno ste izmeni takmicara!");
                 });
             }
-            else if (p.status == 502) {
+            else if (p.status == 404) {
                 alert("Greska! Ne postoji instanca u bazi!");
             }
         }).catch(p => {

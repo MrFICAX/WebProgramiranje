@@ -272,8 +272,8 @@ export class Klub {
                     alert("Uspesno ste promenili ime kluba!");
                 });
             }
-            else if (p.status == 406) {
-                alert("Input all informations.");
+            else if (p.status == 404) {
+                alert("Trazeni podataka nije pronadjen u bazi.");
             }
         }).catch(p => {
             alert("Error");
